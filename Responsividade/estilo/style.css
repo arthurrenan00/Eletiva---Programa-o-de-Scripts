@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.cabecalho {
+    background-color: #7FFFD4;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Barra de menu */
+.menu {
+    overflow: hidden;
+    background-color: #008B8B;
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+
+/* Item do menu */
+.menu a {
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Mudar a cor do item do menu quando o ponteiro do mouse estiver sobre
+o item */
+.menu a:hover {
+    background-color: #20B2AA;
+    color: black;
+}
+
+.coluna {
+    float: left;
+    padding: 10px;
+}
+
+.coluna.lateral {
+    width: 25%;
+}
+
+.coluna.principal {
+    width: 50%;
+}
+/* Limpa a flutuação após exibir as colunas */
+.conteudo::after {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+/* Layout responsivo - ajusta para três colunas ou empilhadas */
+@media screen and (max-width: 600px) {
+    .coluna.lateral, .coluna.principal {
+    width: 100%;
+    }
+   }
+   .rodape {
+    background-color: #7FFFD4;
+    padding: 10px;
+    text-align: center;
+   }
