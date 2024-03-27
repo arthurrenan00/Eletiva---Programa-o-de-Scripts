@@ -1,0 +1,70 @@
+.produtos{
+    text-align: center;
+    font-size: 28px;
+    margin: auto;
+}
+
+.produtos img{
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
+.titulos{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: cornflowerblue;
+    font-style: italic;
+    text-align: center;
+}
+
+
+.navbar{
+    background-color: orange;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    padding: auto;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+li{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    list-style-type: none;
+}
+
+.texto{
+    font-size: 20px;
+}
+
+#esquerda{
+    text-align: left;
+    color: gray;
+}
+
+#justificado{
+    text-align: justify;
+    color: forestgreen;
+}
+
+#centralizado{
+    text-align: center;
+    color: orangered;
+}
+
+#direita{
+    text-align: right;
+    color: purple;
+}
+
