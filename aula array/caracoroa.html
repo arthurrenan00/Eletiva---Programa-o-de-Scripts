@@ -11,11 +11,14 @@
     <h1>Cara ou Coroa</h1>
     <input type="button" value="Sortear" id="btSortear">
     <input type="button" value="Estatísticas" id="btEstat">
+    <input type="button" value="Limpar" id="btLimpar">
+
     <div id="area"></div>
     <div id="res"></div>
     <script>
         btSortear.addEventListener('click', sortear);
         btEstat.addEventListener('click', estatisticas);
+        btLimpar.addEventListener('click', limpar);
         var cara = 0;
         var coroa = 0;
 
@@ -39,6 +42,14 @@
             res.innerHTML = '<h2>Estatísticas</h2>' +
                 'Caras = ' + cara + '(' + pcara.toFixed(2) + '%)<br>' +
                 'Coroas = ' + coroa + '(' + pcoroa.toFixed(2) + '%)';
+        }
+
+        function limpar() {
+            area.innerHTML = '';
+            area.style.backgroundColor=null;
+            coroa = 0;
+            cara = 0;
+            res.innerHTML = '';
         }
     </script>
 </body>
