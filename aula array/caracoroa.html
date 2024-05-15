@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -16,17 +16,29 @@
     <script>
         btSortear.addEventListener('click', sortear);
         btEstat.addEventListener('click', estatisticas);
+        var cara = 0;
+        var coroa = 0;
 
         function sortear() {
             face = Math.floor(Math.random() * 2) + 1;
-            area.innerHTML += '<img src="./img/moeda_'+face+'.jpg">';
-            area.style.margin= '25px 0px';
-            area.style.padding='10px';
-            area.style.backgroundColor='rgb(176, 224, 230)';
+            if (face == 1)
+                cara++;
+            else
+                coroa++;
+            area.innerHTML += '<img src="./img/moeda_' + face + '.jpg">';
+            area.style.margin = '25px 0px';
+            area.style.padding = '10px';
+            area.style.backgroundColor = 'rgb(176, 224, 230)';
+            estatisticas();
         }
 
-        function estatisticas(){
-            
+        function estatisticas() {
+            var total = cara + coroa;
+            var pcara = (cara / total) * 100;
+            var pcoroa = (coroa / total) * 100;
+            res.innerHTML = '<h2>Estatísticas</h2>' +
+                'Caras = ' + cara + '(' + pcara.toFixed(2) + '%)<br>' +
+                'Coroas = ' + coroa + '(' + pcoroa.toFixed(2) + '%)';
         }
     </script>
 </body>
