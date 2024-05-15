@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagm</title>
+</head>
+
+<body>
+    <h1>Imagem</h1>
+    <a id="ancor">
+        <img src="./img/lamp-desl.png" border="0" id="lampada">
+    </a>
+    <script>
+        function mudar(objeto, imagem) {
+            objeto.src = imagem;
+        }
+
+        ancor.addEventListener('mouseout', function () {
+            mudar(lampada, "./img/lamp-desl.png");
+        });
+
+        ancor.addEventListener('mouseover', function () {
+            mudar(lampada, "./img/lamp-lig.png");
+        })
+
+    </script>
+</body>
+
+</html>
