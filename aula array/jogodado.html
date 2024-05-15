@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Dado</title>
+</head>
+
+<body>
+    <h1>JOGO DO DADO</h1>
+    <input type="button" value="Sortear" id="btSortear">
+    <div id="area"></div>
+    <div id="res"></div>
+    <script>
+        btSortear.addEventListener('click', sortear);
+        var lados = new Array(0, 0, 0, 0, 0, 0);
+
+        function sortear() {
+            area.innerHTML = '';
+            for (var i = 0; i < 100; i++) {
+                var lado = Math.floor(Math.random() * 6) + 1;
+                lados[lado - 1]++;
+                area.innerHTML += '<img src="./img/dado_' + lado + '.jpg">';
+            }
+            res.innerHTML = '<h2>Ocorrencias</h2><ul>';
+            for (var i = 0; i < 6; i++) {
+                res.innerHTML += '<li>Lado ' + (i + 1) + ' ocorreu ' + lados[i] + ' vezes.</li>';
+            }
+            res.innerHTML += '</ul>';
+        }
+    </script>
+</body>
+
+</html>
