@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de preço</title>
+</head>
+
+<body>
+    <h1>Calcular preço de venda do produto</h1>
+    <label for="produto">Preço unitário(Ex:10.50): </label>
+    <input type="text" id="txtProd"><br><br>
+    <label for="quantidade">Quantidade de venda: </label>
+    <input type="number" min="1" id="numQuant"><br><br>
+    <label for="desconto">Quantos % de desconto?: </label>
+    <input type="number" min="1" id="numDesc"><br><br>
+    <input type="button" value="Calcular" id="btCalc">
+    <div id="res">
+        <h3>Preço Bruto = R$<span id="pb">0</span></h3>
+        <h3>Valor total do Desconto = R$<span id="d">0</span></h3>
+        <h3>Valor final da venda = R$<span id="venda">0</span></h3>
+    </div>
+    <script>
+        btCalc.addEventListener('click', calcular);
+
+        function calcular() {
+            let preco = parseFloat(txtProd.value);
+            let quant = parseInt(numQuant.value);
+            let desc = parseInt(numDesc.value);
+            let precoBruto = preco * quant;
+            let desconto = preco * quant * desc / 100;
+            let valorFinal = precoBruto - desconto;
+            pb.innerHTML = precoBruto.toFixed(2);
+            d.innerHTML = desconto.toFixed(2);
+            venda.innerHTML = valorFinal.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
