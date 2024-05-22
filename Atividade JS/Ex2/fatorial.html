@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+</head>
+
+<body>
+    <h1>Cálculo de fatoriais</h1><br>
+    <input type="number" min="1" id="num" name="numero">
+    <input type="button" value="Calcular" id="btCalc">
+    <input type="button" value="Limpar" id="btLimpar">
+    <div id="res"></div>
+    <script>
+        btCalc.addEventListener('click', calculo);
+        btLimpar.addEventListener('click', limpar);
+        var fatorial = 1;
+
+        function calculo() {
+            fatorial = 1;
+            for (var i = num.value; i > 1; i--) {
+                fatorial *= i;
+            }
+            res.innerHTML= '';
+            res.innerHTML = '<p>O fatorial do número ' + num.value+'= ' + fatorial+ '</p>';
+        }
+
+        function limpar(){
+            fatorial = 1;
+            res.innerHTML = '';
+        }
+    </script>
+</body>
+
+</html>
