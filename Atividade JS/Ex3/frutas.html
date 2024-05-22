@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas</title>
+</head>
+
+<body>
+    <h1>Hortifruti</h1>
+    <h3>Escolha uma das frutas:</h3>
+    <input type="button" value="Goiaba" id="rGoiaba">
+    <input type="button" value="Carambola" id="rCarambola">
+    <input type="button" value="Laranja" id="rLaranja">
+    <input type="button" value="Manga" id="rManga">
+    <input type="button" value="Physalis" id="rPhysalis">
+    <input type="button" value="Tomate" id="rTomate">
+
+    <div id="imagens">
+        <img id="imgFruta">
+    </div>
+    <script>
+        rGoiaba.addEventListener('click', function () { mostrar(0); });
+        rCarambola.addEventListener('click', function () { mostrar(1); });
+        rLaranja.addEventListener('click', function () { mostrar(2); });
+        rManga.addEventListener('click', function () { mostrar(3); });
+        rPhysalis.addEventListener('click', function () { mostrar(4); });
+        rTomate.addEventListener('click', function () { mostrar(5); });
+        var frutas = new Array('goiaba', 'carambola', 'laranja', 'manga', 'physalis', 'tomate');
+        function mostrar(ind) {
+            imgFruta.src = './img/' + frutas[ind] + '.png';
+            imgFruta.style.width = '400px';
+        }
+
+
+    </script>
+</body>
+
+</html>
