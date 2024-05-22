@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Retângulo</title>
+</head>
+
+<body>
+    <h1>Cálculo de Área de um qudrado ou retângulo</h1><br>
+    <h3>Digite o valor dos lados: </h3><br>
+    <h4>Esquerdo e Direito:</h4>
+    <input type="number" min="1" name="lado1" id="altura"><br>
+    <h4 >De cima e de baixo:</h4>
+    <input type="number" min="1" name="lado4" id="base"><br><br>
+    <input type="button" value="Área" id="btArea">
+    <input type="button" value="Limpar" id="btLimpar">
+    <div id="res"></div>
+    <div id="imagens"></div>
+    <script>
+        btArea.addEventListener('click', function (){ 
+            calcArea(); retOuQuad();});
+        btLimpar.addEventListener('click', limpar);
+        var areaRet = 0;
+        function calcArea() {
+            areaRet = altura.value * base.value;
+            res.innerHTML = '';
+            res.innerHTML += '<p> A área é = ' + areaRet + '!</p>';
+        }
+
+        function retOuQuad() {
+            if (altura.value == base.value) {
+                imagens.innerHTML = '';
+                imagens.innerHTML += '<img width= "400px" src="./img/quadrado.png">';
+            } else {
+                imagens.innerHTML = '';
+                imagens.innerHTML += '<img width= "400px" src="./img/retangulo.png">';
+            }
+        }
+
+        function limpar() {
+            areaRet = null;
+            altura.value = null;
+            base.value = null;
+            imagens.innerHTML = '';
+            res.innerHTML = '';
+        }
+    </script>
+</body>
+
+</html>
